@@ -3,6 +3,7 @@ var express= require('express')
 var hbs=require('hbs')
 
 var app= express()
+var port= process.env.PORT || 3000;
 
 
 
@@ -70,6 +71,6 @@ app.get('/products',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('the server is active on port 3000')
+app.listen(port,()=>{
+    console.log('the server is active on port'+ port)
 })
